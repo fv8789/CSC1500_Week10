@@ -1,0 +1,15 @@
+import csv
+import json
+
+with open("SalesJan2009.csv","r") as x:
+    y = csv.reader(x)
+    sales_data=[]
+    for row in y:
+        sales_data.append({"Transaction_Date":row[0].strip('"'),"Product":row[1].strip('"'),
+                           "Price":row[2].strip('"'),"Payment_Type":row[3].strip('"'),
+                           "Name":row[4].strip('"'),"City":row[5].strip('"'),"State":row[6].strip('"'),
+                           "Country":row[7].strip('"')})
+        
+with open("transaction_data.json","w") as x2:
+    json.dump(sales_data,x2)
+

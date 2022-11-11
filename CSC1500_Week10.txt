@@ -1,0 +1,10 @@
+import math
+
+def sphere_volume(r):
+    volume = (4/3)*(math.pi)*math.pow(int(r),3)
+    return volume
+
+def main():
+    user = input("Input radius for sphere volume: ")
+    print("The volume of the sphere is: ",sphere_volume(user))
+main()

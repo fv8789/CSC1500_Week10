@@ -1,0 +1,17 @@
+def print_range(start,end):
+    if start == end:
+        print(start)
+    else:
+        if start < end:
+            print(start)
+            print_range(start + 1, end)
+        else:
+            print(end)
+            print_range(start, end + 1)
+
+def main():
+    start = int(input("Enter start value for range: "))
+    end = int(input("Enter end value for range: "))
+    print_range(start,end)
+    
+main()

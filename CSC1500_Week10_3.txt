@@ -1,0 +1,13 @@
+def gcd(a, b):
+    if b == 0:
+        return a
+    r = a % b
+    return gcd(b, r)
+    
+def main():
+    user=int(input("Enter first number:  "))
+    user2=int(input("Enter second number: "))
+    print("The gcd is: ", gcd(user,user2))
+
+main()
+

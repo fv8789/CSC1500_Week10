@@ -1,0 +1,1 @@
+print([line.upper() for line in open("SalesJan2009.csv")])
